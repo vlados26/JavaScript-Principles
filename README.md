@@ -1,4 +1,4 @@
-<h3 align="center">JavaScript-Principles</p>
+<h1 align="center">JavaScript-Principles</p>
 
 ## Promises & Microtask Queue
 ```js
