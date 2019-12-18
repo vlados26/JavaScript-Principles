@@ -68,7 +68,6 @@ const output = reduce([
 <details>
 <summary>Example of Microtask Queue, Callback Queue and which is faster</summary>
 
-
 ```js
 function display(data){console.log(data)}
 function printHello(){console.log("Hello")}
@@ -85,5 +84,23 @@ blockFor300ms()
 
 console.log("Me first!");
 ```
+</details>
 
+<details>
+<summary>Async/await using generators</summary>
+
+```js
+function doWhenDataReceived(value) {
+    returnNextElement.next(value)
+}
+
+function* createFlow() {
+    const data = yield fetch('http://twitter.com/will/tweets/1') console.log(data)
+}
+
+const returnNextElement = createFlow()
+const futureData = returnNextElement.next()
+
+futureData.then(doWhenDataReceived)
+```
 </details>
