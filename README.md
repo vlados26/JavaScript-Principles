@@ -27,7 +27,7 @@ console.log("Me first!");
 The function we pass in is a callback function. The outer function that takes in the function (our callback) is a higher-order function
 ```js
 const copyArrayAndManipulate = (array, instructions) => {
-    const output = [];
+	const output = [];
     for (let i = 0; i < array.length; i++) {
         output.push(instructions(array[i]));
     }
@@ -53,8 +53,8 @@ const subtract4 = x => x-4
 const reduce = (array, howToCombine, buildingUp) => {
 	for (let i = 0; i < array.length; i++){
 		buildingUp = howToCombine(buildingUp, array[i])
-  	}
-  	return buildingUp
+	}
+	return buildingUp
 }
 
 const runFunctionOnInput = (input,fn) => { return fn(input) }
