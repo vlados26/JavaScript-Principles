@@ -1,5 +1,20 @@
 <h3 align="center">JavaScript-Principles</p>
 
+## Callback vs. Higher-order function
+The function we pass in is a callback function. The outer function that takes in the function (our callback) is a higher-order function
+```
+const copyArrayAndManipulate = (array, instructions) => {
+    const output = [];
+    for (let i = 0; i < array.length; i++) {
+        output.push(instructions(array[i]));
+    }
+    return output;
+}
+const multiplyBy2(input) => {
+    return input * 2;
+}
+const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
+```
 ## Function copmosition
 — **Easier to add features** - This is the _essential_ aspect of functional javascript - being able to list of our units of code by name and have them run one by one as independent, self-contained pieces<br />
 — **More readable** - reduce here is often wrapped in compose to say ‘combine up’ the functions to run our data through them one by one. The style is ‘point free’<br />
