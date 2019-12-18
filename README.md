@@ -1,6 +1,7 @@
-<h1 align="center">JavaScript-Principles</p>
+<h3 align="center">JavaScript-Principles</p>
 
 ## Function copmosition
+
 ```
 const multiplyBy2 = x => x*2 
 const add3 = x => x+3 
