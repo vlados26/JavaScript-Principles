@@ -25,7 +25,7 @@ console.log("Me first!");
 
 ## Callback vs. Higher-order function
 The function we pass in is a callback function. The outer function that takes in the function (our callback) is a higher-order function
-```
+```js
 const copyArrayAndManipulate = (array, instructions) => {
     const output = [];
     for (let i = 0; i < array.length; i++) {
@@ -44,7 +44,7 @@ const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
 — **Easier to add features** - This is the _essential_ aspect of functional javascript - being able to list of our units of code by name and have them run one by one as independent, self-contained pieces<br />
 — **More readable** - reduce here is often wrapped in compose to say ‘combine up’ the functions to run our data through them one by one. The style is ‘point free’<br />
 — **Easier to debug** - I know exactly the line of code my bug is in - it’s got a label
-```
+```js
 const multiplyBy2 = x => x*2 
 const add3 = x => x+3 
 const divideBy5 = x => x/5
