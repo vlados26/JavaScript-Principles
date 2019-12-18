@@ -66,7 +66,7 @@ const output = reduce([
 
 ## Programming
 <details>
-<summary>Example of Microtask Queue, Callback Queue and which is faster</summary>
+<summary>Example of Microtask Queue, Callback Queue and which is faster:</summary>
 
 ```js
 function display(data){console.log(data)}
@@ -87,7 +87,7 @@ console.log("Me first!");
 </details>
 
 <details>
-<summary>Async/await using generators</summary>
+<summary>Async/await using generators:</summary>
 
 ```js
 function doWhenDataReceived(value) {
