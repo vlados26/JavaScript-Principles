@@ -67,7 +67,7 @@ const output = reduce([
 ## Programming
 <details>
 <summary>Example of Microtask Queue, Callback Queue and which is faster</summary>
-<code>
+
 
 ```js
 function display(data){console.log(data)}
@@ -85,5 +85,5 @@ blockFor300ms()
 
 console.log("Me first!");
 ```
-</code>
+
 </details>
