@@ -5,6 +5,7 @@
 <summary>Summary text.</summary>
 <code style="white-space:nowrap;">
 
+```js
 function display(data){console.log(data)}
 function printHello(){console.log("Hello")}
 function blockFor300ms(){/* blocks js thread for 300ms with long for loop */}
@@ -19,7 +20,7 @@ blockFor300ms()
 // Which will run first?
 
 console.log("Me first!");
-
+```
 </code>
 </details>
 
@@ -37,7 +38,6 @@ const copyArrayAndManipulate = (array, instructions) => {
 const multiplyBy2(input) => {
     return input * 2;
 }
-
 
 const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
 ```
