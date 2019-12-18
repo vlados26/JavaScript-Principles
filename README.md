@@ -10,9 +10,11 @@ const copyArrayAndManipulate = (array, instructions) => {
     }
     return output;
 }
+
 const multiplyBy2(input) => {
     return input * 2;
 }
+
 const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
 ```
 ## Function copmosition
@@ -31,7 +33,9 @@ const reduce = (array, howToCombine, buildingUp) => {
   	}
   	return buildingUp
 }
+
 const runFunctionOnInput = (input,fn) => { return fn(input) }
+
 const output = reduce([
 		multiplyBy2,
 		add3,
