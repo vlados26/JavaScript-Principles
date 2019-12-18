@@ -1,7 +1,7 @@
 <h1 align="center">JavaScript-Principles</p>
 
 ## Promises & Microtask Queue
-Based on docs Promises are going to Microtask Queue, setTimeout to Callback Queue. Microtask has more priority over Callback queue
+Based on docs Promises are going to Microtask Queue, setTimeout to Callback Queue. Microtask has more priority over Callback queue and gets into call stack faster
 ```js
 function display(data){console.log(data)}
 function printHello(){console.log("Hello")}
