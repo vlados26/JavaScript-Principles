@@ -1,10 +1,6 @@
 <h3 align="center">JavaScript-Principles</p>
 
-## 
-<details>
-<summary>Summary text.</summary>
-<code style="white-space:nowrap;">
-
+## Promises & Microtask Queue
 ```js
 function display(data){console.log(data)}
 function printHello(){console.log("Hello")}
@@ -21,8 +17,6 @@ blockFor300ms()
 
 console.log("Me first!");
 ```
-</code>
-</details>
 
 ## Callback vs. Higher-order function
 The function we pass in is a callback function. The outer function that takes in the function (our callback) is a higher-order function
