@@ -1,5 +1,6 @@
-# JavaScript-Principles
-
+<p align="center">
+	# JavaScript-Principles
+</p>
 Function copmosition
 ```
 const multiplyBy2 = x => x*2 
