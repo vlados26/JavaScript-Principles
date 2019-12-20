@@ -90,7 +90,8 @@ const oncify = (convertMe) => {
     let counter = 0
     const inner = (input) => {
         if (counter === 0) {
-            const output = convertMe(input) counter++
+            const output = convertMe(input) 
+	    counter++
             return output
         }
         return "Sorry"
@@ -114,7 +115,8 @@ const multiply = (a, b) => a * b
 
 function prefillFunction(fn, prefilledValue) {
     const inner = (liveInput) => {
-        const output = fn(liveInput, prefilledValue) return output
+        const output = fn(liveInput, prefilledValue) 
+	return output
     }
     return inner
 }
