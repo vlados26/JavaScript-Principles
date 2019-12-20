@@ -181,3 +181,13 @@ const futureData = returnNextElement.next()
 futureData.then(doWhenDataReceived)
 ```
 </details>
+
+<details>
+<summary>Fibonacci</summary>
+
+```js
+const factorial = (n) => n <= 1 ? n : n*(n-1);
+
+factorial(5); // 20
+```
+</details>
