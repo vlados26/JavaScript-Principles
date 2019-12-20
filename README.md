@@ -65,6 +65,22 @@ const output = reduce([
 )
 ```
 
+## Closure
+The Closed over Variable Environment (COVE) or ‘Closure’<br>
+This ‘backpack’ of live data that gets returned out with incrementCounter is known as the ‘closure’.<br>
+The ‘backpack’ (or ‘closure’) of live data is attached incrementCounter (then to myNewFunction) through a hidden property known as [[scope]] which persists when the inner function is returned ou
+```
+const outer = () => {
+    let counter = 0;
+    const incrementCounter = () => {
+        counter++;
+    }
+    return incrementCounter
+}
+const newFunction = outer();
+newFunction() newFunction()
+```
+
 ## Programming
 <details>
 <summary>Example of Microtask Queue, Callback Queue and which is faster:</summary>
