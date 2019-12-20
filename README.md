@@ -85,7 +85,7 @@ newFunction()
 
 ## Function decoration
 To add a permanent memory to an existing function we have to create a new function that will run the existing function inside of itself
-```
+```js
 const oncify = (convertMe) => {
     let counter = 0
     const inner = (input) => {
