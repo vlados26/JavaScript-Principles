@@ -109,7 +109,7 @@ oncifiedMultiplyBy2(7) // Sorry
 ## Partial application
 — In practice we may have to prefill one, two... multiple arguments at different times<br/>
 — We can convert (‘decorate’) any function to a function that will accept arguments one by one and only run the function in full once it has all the argument
-```
+```js
 const multiply = (a, b) => a * b
 
 function prefillFunction(fn, prefilledValue) {
