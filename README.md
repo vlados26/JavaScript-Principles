@@ -123,7 +123,22 @@ function prefillFunction(fn, prefilledValue) {
 
 const multiplyBy2 = prefillFunction(multiply, 2)
 
-const result = multiplyBy2(5)
+const result = multiplyBy2(5) // 10
+```
+
+## Currying
+```js
+const multiply = (a, b) => a * b
+
+function prefillFunction(fn, prefilledValue) {
+    const inner = (liveInput) => {
+        const output = fn(liveInput, prefilledValue) 
+	return output
+    }
+    return inner
+}
+
+const multiplyBy2 = prefillFunction(multiply, 2)(5) // 10
 ```
 
 ## Programming
