@@ -77,8 +77,51 @@ const outer = () => {
     }
     return incrementCounter
 }
+
 const newFunction = outer();
-newFunction() newFunction()
+newFunction() 
+newFunction()
+```
+
+## Function decoration
+To add a permanent memory to an existing function we have to create a new function that will run the existing function inside of itself
+```
+const oncify = (convertMe) => {
+    let counter = 0
+    const inner = (input) => {
+        if (counter === 0) {
+            const output = convertMe(input) counter++
+            return output
+        }
+        return "Sorry"
+    }
+    return inner
+}
+
+const multiplyBy2 = num => num * 2
+
+const oncifiedMultiplyBy2 = oncify(multiplyBy2)
+
+oncifiedMultiplyBy2(10) // 20 
+oncifiedMultiplyBy2(7) // Sorry
+```
+
+## Partial application
+— In practice we may have to prefill one, two... multiple arguments at different times<br/>
+— We can convert (‘decorate’) any function to a function that will accept arguments one by one and only run the function in full once it has all the argument
+```
+const multiply = (a, b) => a * b
+
+function prefillFunction(fn, prefilledValue) {
+    const inner = (liveInput) => {
+        const output = fn(liveInput, prefilledValue) return output
+    }
+    return inner
+}
+
+const multiplyBy2 = prefillFunction(multiply, 2)
+
+const result = multiplyBy2(5)
 ```
 
 ## Programming
