@@ -13,16 +13,15 @@ var tmp = [
   }
 ];
 
+// Old version
 var first = tmp[0];
 var second = tmp[1];
-
 var firstName = first.name;
 var firstEmail = (first.email !== undefined) ? first.email: "nobody@none.tld";
-
 var secondName = second.name;
 var secondEmail = (second.email !== undefined) ? second.email : "nobody@none.tld";
 
-
+// With destructuring
 var [
     {
         name: firstName,
