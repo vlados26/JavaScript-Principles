@@ -1,5 +1,42 @@
 <h1 align="center">JavaScript-Principles</p>
 
+## Array Destructuring
+```js
+var tmp = [
+  {
+    name: "vlad",
+    email: "vlados@gmail.com"
+  },
+  {
+    name: "vlad",
+    email: "vlados@gmail.com"
+  }
+];
+
+var first = tmp[0];
+var second = tmp[1];
+
+var firstName = first.name;
+var firstEmail = (first.email !== undefined) ? first.email: "nobody@none.tld";
+
+var secondName = second.name;
+var secondEmail = (second.email !== undefined) ? second.email : "nobody@none.tld";
+
+
+var [
+    {
+        name: firstName,
+        email: firstEmail = "nobody@none.tld"
+    },
+    {
+        name: secondName,
+        email: secondEmail = "nobody@none.tld"
+    }
+] = tmp;
+
+console.log(firstName);
+```
+
 ## Promises & Microtask Queue
 Based on docs Promises are going to Microtask Queue, setTimeout to Callback Queue. Microtask has more priority over Callback queue and gets into call stack faster
 ```js
