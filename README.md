@@ -1,6 +1,6 @@
 <h1 align="center">JavaScript-Principles</p>
 
-## Array Destructuring
+## Destructuring
 ```js
 var tmp = [
   {
