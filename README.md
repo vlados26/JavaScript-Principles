@@ -107,21 +107,21 @@ const divideBy5 = x => x/5
 const subtract4 = x => x-4
 
 const reduce = (array, howToCombine, buildingUp) => {
-	for (let i = 0; i < array.length; i++){
-		buildingUp = howToCombine(buildingUp, array[i])
-	}
-	return buildingUp
+    for (let i = 0; i < array.length; i++){
+        buildingUp = howToCombine(buildingUp, array[i])
+    }
+    return buildingUp
 }
 
 const runFunctionOnInput = (input,fn) => { return fn(input) }
 
 const output = reduce([
-		multiplyBy2,
-		add3,
-		divideBy5,
-		subtract4
-  	],
-  	runFunctionOnInput, 11 
+        multiplyBy2,
+        add3,
+        divideBy5,
+        subtract4
+    ],
+    runFunctionOnInput, 11 
 )
 ```
 
@@ -151,7 +151,7 @@ const oncify = (convertMe) => {
     const inner = (input) => {
         if (counter === 0) {
             const output = convertMe(input) 
-	    counter++
+        counter++
             return output
         }
         return "Sorry"
@@ -176,7 +176,7 @@ const multiply = (a, b) => a * b
 function prefillFunction(fn, prefilledValue) {
     const inner = (liveInput) => {
         const output = fn(liveInput, prefilledValue) 
-	return output
+    return output
     }
     return inner
 }
@@ -193,12 +193,26 @@ const multiply = (a, b) => a * b
 function prefillFunction(fn, prefilledValue) {
     const inner = (liveInput) => {
         const output = fn(liveInput, prefilledValue) 
-	return output
+    return output
     }
     return inner
 }
 
 const multiplyBy2 = prefillFunction(multiply, 2)(5) // 10
+```
+
+##Memoization
+Memoization used to store function result of previous call, to return result of previous call on the next call. It's useful when result the same everytime
+```js
+function repeater(count) {
+    return memoize(function allTheAs() {
+        return "".padStart(count, "A");
+    });
+}
+
+vat A = repeater(10);
+A(); // "AAAAAAAAAA"
+A(); // "AAAAAAAAAA"
 ```
 
 ## Programming
