@@ -57,6 +57,7 @@ console.log("Me first!");
 
 ## Callback vs. Higher-order function
 The function we pass in is a callback function. The outer function that takes in the function (our callback) is a higher-order function
+// Example 1
 ```js
 const copyArrayAndManipulate = (array, instructions) => {
 	const output = [];
@@ -72,6 +73,29 @@ const multiplyBy2(input) => {
 
 const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
 ```
+Example 2
+```js
+function unary(fn) {
+  return function one(arg) {
+    return fn(arg);
+  }
+}
+
+function binary(fn) {
+  return function two(arg1, arg2) {
+    return fn(arg1, arg2);
+  }
+}
+
+function f(...args) {
+  return args;
+}
+
+const result1 = unary(f); // [1]
+const result2 = binary(f); // [1,2]
+
+```
+
 ## Function copmosition
 — **Easier to add features** - This is the _essential_ aspect of functional javascript - being able to list of our units of code by name and have them run one by one as independent, self-contained pieces<br />
 — **More readable** - reduce here is often wrapped in compose to say ‘combine up’ the functions to run our data through them one by one. The style is ‘point free’<br />
