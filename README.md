@@ -201,7 +201,7 @@ function prefillFunction(fn, prefilledValue) {
 const multiplyBy2 = prefillFunction(multiply, 2)(5) // 10
 ```
 
-##Memoization
+## Memoization
 Memoization used to store function result of previous call, to return result of previous call on the next call. It's useful when result the same everytime
 ```js
 function repeater(count) {
