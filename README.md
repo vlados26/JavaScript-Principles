@@ -57,8 +57,8 @@ console.log("Me first!");
 
 ## Callback vs. Higher-order function
 The function we pass in is a callback function. The outer function that takes in the function (our callback) is a higher-order function
-// Example 1
 ```js
+// Example 1
 const copyArrayAndManipulate = (array, instructions) => {
 	const output = [];
     for (let i = 0; i < array.length; i++) {
@@ -73,8 +73,8 @@ const multiplyBy2(input) => {
 
 const result = copyArrayAndManipulate([1, 2, 3], multiplyBy2);
 ```
-Example 2
 ```js
+// Example 2
 function unary(fn) {
   return function one(arg) {
     return fn(arg);
