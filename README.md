@@ -60,7 +60,7 @@ The function we pass in is a callback function. The outer function that takes in
 ```js
 // Example 1
 const copyArrayAndManipulate = (array, instructions) => {
-	const output = [];
+    const output = [];
     for (let i = 0; i < array.length; i++) {
         output.push(instructions(array[i]));
     }
