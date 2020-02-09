@@ -127,23 +127,23 @@ const output = reduce([
 ```
 ```js
 // Example 2
-const multiplyBy2 = x => x*2 
-const add3 = x => x+3 
-const divideBy5 = x => x/5
-const subtract4 = x => x-4
+const multiplyBy2 = x => x * 2
+const add3 = x => x + 3
+const divideBy5 = x => x / 5
+const subtract4 = x => x - 4
 
 const reduce = (buildingUp, fns) => {
-  for (let fn of fns) {
-    buildingUp = fn(buildingUp);
-  }
-  return buildingUp
+    for (let fn of fns) {
+        buildingUp = fn(buildingUp);
+    }
+    return buildingUp
 }
 
 const output = reduce(11, [
-  multiplyBy2,
-  add3,
-  divideBy5,
-  subtract4
+    multiplyBy2,
+    add3,
+    divideBy5,
+    subtract4
 ])
 console.log(output);
 ```
