@@ -101,6 +101,7 @@ const result2 = binary(f); // [1,2]
 — **More readable** - reduce here is often wrapped in compose to say ‘combine up’ the functions to run our data through them one by one. The style is ‘point free’<br />
 — **Easier to debug** - I know exactly the line of code my bug is in - it’s got a label
 ```js
+// Example 1
 const multiplyBy2 = x => x*2 
 const add3 = x => x+3 
 const divideBy5 = x => x/5
@@ -123,6 +124,28 @@ const output = reduce([
     ],
     runFunctionOnInput, 11 
 )
+```
+```js
+// Example 2
+const multiplyBy2 = x => x*2 
+const add3 = x => x+3 
+const divideBy5 = x => x/5
+const subtract4 = x => x-4
+
+const reduce = (buildingUp, fns) => {
+  for (let fn of fns) {
+    buildingUp = fn(buildingUp);
+  }
+  return buildingUp
+}
+
+const output = reduce(11, [
+  multiplyBy2,
+  add3,
+  divideBy5,
+  subtract4
+])
+console.log(output);
 ```
 
 ## Closure
