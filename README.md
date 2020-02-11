@@ -147,6 +147,24 @@ const output = reduce(11, [
 ])
 console.log(output);
 ```
+```js
+// Example 4
+const multiplyBy2 = x => x * 2
+const add3 = x => x + 3
+const divideBy5 = x => x / 5
+const subtract4 = x => x - 4
+
+function compose(...fns) {
+  return function(v) {
+    return fns.reduce((val, fn) => {
+      return fn(val); 
+    }, v);
+  }
+}
+
+const output = compose(multiplyBy2, add3, divideBy5, subtract4)(6);
+console.log(output);
+```
 
 ## Closure
 The Closed over Variable Environment (COVE) or ‘Closure’<br>
