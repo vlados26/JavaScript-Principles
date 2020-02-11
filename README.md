@@ -148,7 +148,7 @@ const output = reduce(11, [
 console.log(output);
 ```
 ```js
-// Example 4
+// Example 3
 const multiplyBy2 = x => x * 2
 const add3 = x => x + 3
 const divideBy5 = x => x / 5
