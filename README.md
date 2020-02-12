@@ -306,3 +306,22 @@ const factorial = (n) => n <= 1 ? n : n*(n-1);
 factorial(5); // 20
 ```
 </details>
+
+<h1 align="center">TypeScript</p>
+## Type
+Type similar as interface
+```ts
+type Contact = (
+  name: string,
+  email: string,
+  age: number
+) => void;
+
+const sendIfno: Contact = (name, email, age) => {
+  console.log(name);
+  console.log(email);
+  console.log(age);
+}
+
+sendIfno('Vlad', 'sirotkin96@gmail.com', 24);
+```
