@@ -312,7 +312,7 @@ factorial(5); // 20
 ## Interface && Type
 Type similar as interface but have different implementation
 ```js
-// Interface && Type for function
+// Interface && Type for functions
 type Contact = (
   name: string,
   email: string,
