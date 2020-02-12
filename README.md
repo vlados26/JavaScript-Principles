@@ -323,11 +323,23 @@ interface Contact {
   (name: string, email: string, age: number): void
 };
 
-const sendIfno: Contact = (name, email, age) => {
+const sendInfo: Contact = (name, email, age) => {
   console.log(name);
   console.log(email);
   console.log(age);
 }
 
 sendIfno('Vlad', 'sirotkin96@gmail.com', 24);
+```
+```js
+// Extending interfaces
+interface Age { age: number };
+interface Email { email: string };
+interface Person extends Email, Age { name: string; }
+
+const info: Person = {
+  age: 24,
+  name: 'Vlad',
+  email: 'sirotkin96@gmail.com'
+}
 ```
