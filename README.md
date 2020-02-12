@@ -310,7 +310,7 @@ factorial(5); // 20
 <h1 align="center">TypeScript</p>
 ## Type
 Type similar as interface
-```ts
+```js
 type Contact = (
   name: string,
   email: string,
