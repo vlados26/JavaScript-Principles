@@ -307,16 +307,21 @@ factorial(5); // 20
 ```
 </details>
 
-<h2 align="center">TypeScript</p>
+<h1 align="center">TypeScript</p>
 
-## Type
-Type similar as interface
+## Interface && Type
+Type similar as interface but have different implementation
 ```js
+// Interface && Type for function
 type Contact = (
   name: string,
   email: string,
   age: number
 ) => void;
+
+interface Contact {
+  (name: string, email: string, age: number): void
+};
 
 const sendIfno: Contact = (name, email, age) => {
   console.log(name);
