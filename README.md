@@ -307,7 +307,8 @@ factorial(5); // 20
 ```
 </details>
 
-<h1 align="center">TypeScript</p>
+<h2 align="center">TypeScript</p>
+
 ## Type
 Type similar as interface
 ```js
