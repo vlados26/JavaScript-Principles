@@ -343,3 +343,16 @@ const info: Person = {
   email: 'sirotkin96@gmail.com'
 }
 ```
+## Generics
+Generics used to throw type to interface
+```js
+interface Person<X> {
+  name: X;
+  age: number;
+}
+
+const obj: Person<string> = {
+  name: 'Vladislav',
+  age: 24
+};
+```
