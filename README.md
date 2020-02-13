@@ -357,3 +357,13 @@ const obj: Person<string> = {
   age: 24
 };
 ```
+```js
+// How to pass default value (T = any)
+interface FilterFunction<T = any> {
+  (val: T): boolean;
+}
+
+const result: FilterFunction<string> = val => typeof val === 'string';
+result(0); // Error
+result('Vlad'); // Good
+```
