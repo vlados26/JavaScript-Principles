@@ -345,9 +345,10 @@ const info: Person = {
 ```
 ## Generics
 Generics used to throw type to interface
+Naming convention: T
 ```js
-interface Person<X> {
-  name: X;
+interface Person<T> {
+  name: T;
   age: number;
 }
 
