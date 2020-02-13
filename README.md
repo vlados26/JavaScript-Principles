@@ -367,3 +367,11 @@ const result: FilterFunction<string> = val => typeof val === 'string';
 result(0); // Error
 result('Vlad'); // Good
 ```
+```js
+function startTuple<T>(str: T) {
+  return function finishTuple<U>(num: U) {
+    return [str, num] as [T, U];
+  }
+}
+const result = startTuple(["first"])(42); // [string[], number]
+```
