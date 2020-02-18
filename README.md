@@ -298,10 +298,10 @@ futureData.then(doWhenDataReceived)
 </details>
 
 <details>
-<summary>Fibonacci</summary>
+<summary>Factorial</summary>
 
 ```js
-const factorial = (n) => n <= 1 ? n : n*(n-1);
+const factorial = (n) => n <= 1 ? n : n*factorial(n-1);
 
 factorial(5); // 20
 ```
