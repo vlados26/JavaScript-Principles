@@ -308,7 +308,7 @@ factorial(5); // 20
 </details>
 
 <details>
-<summary>Factorial</summary>
+<summary>Infinite curry</summary>
 
 ```js
 function curry(fn, totalArgs){
