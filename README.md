@@ -311,6 +311,7 @@ factorial(5); // 20
 <summary>Infinite curry</summary>
 
 ```js
+// https://theanubhav.com/2019/02/03/js-currying-in-interview/
 function curry(fn, totalArgs){
   totalArgs = totalArgs || fn.length
       return function recursor(){
