@@ -307,6 +307,28 @@ factorial(5); // 20
 ```
 </details>
 
+<details>
+<summary>Factorial</summary>
+
+```js
+function curry(fn, totalArgs){
+  totalArgs = totalArgs || fn.length
+      return function recursor(){
+          return arguments.length < totalArgs
+            ? recursor.bind(this, ...arguments)
+            : fn.call(this, ...arguments);
+      }
+}
+
+const sum = (a,b) => a + b;
+const inc = curry(sum)(1);
+
+console.log("Output1: ", inc(2)) // 3
+console.log("Output2: ", inc()(1)) // 2
+console.log("Output3: ", curry(sum)(1,2)) // 3
+```
+</details>
+
 <h1 align="center">TypeScript</p>
 
 ## Interface && Type
