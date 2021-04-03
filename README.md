@@ -308,11 +308,10 @@ factorial(5); // 20
 </details>
 
 <details>
-<summary>Infinite curry</summary>
+<summary>Infinite curry (https://theanubhav.com/2019/02/03/js-currying-in-interview/)</summary>
 
 ```js
-// https://theanubhav.com/2019/02/03/js-currying-in-interview/
-function curry(fn, totalArgs){
+function curry(fn, totalArgs) {
   totalArgs = totalArgs || fn.length
       return function recursor(){
           return arguments.length < totalArgs
