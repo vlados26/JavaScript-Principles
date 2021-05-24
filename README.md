@@ -328,6 +328,48 @@ console.log("Output2: ", inc()(1)) // 2
 console.log("Output3: ", curry(sum)(1,2)) // 3
 ```
 </details>
+  
+<details>
+<summary>Check is array with uniq objects</summary>
+
+```js
+function isUniq(array) {
+  const arrayOfValues = array.reduce((acc, field) => {
+      const sortedKeys = Object.keys(field).sort();
+      const sortedField = sortedKeys.reduce((_acc, key) => ({..._acc, [key]: field[key]}), {});
+
+      return [...acc, Object.values(sortedField)];
+  }, []);
+
+  const arrayOfStringValues = arrayOfValues.map((value) => value.join(''));
+  const arrayWithoutDuplicates = [...new Set(arrayOfStringValues)];
+
+  return arrayWithoutDuplicates.length === array.length;
+}
+```
+</details>
+ 
+<details>
+<summary>Check is array with uniq objects (dynamic keys)</summary>
+
+```js
+function isUniq(array) {
+  const keys = params.each
+    ? Object.keys(array[0])
+    : params.keys || [];  
+
+  array.every((item, index, array) => {
+      const old = array.slice(0, index);
+      
+      return old.every((oldItem) => {            
+          const everyEqual = keys.every((uniqueKey) => oldItem[uniqueKey] === item[uniqueKey]);
+          
+          return !everyEqual;
+      });
+  });
+}
+```
+</details>
 
 <h1 align="center">TypeScript</p>
 
